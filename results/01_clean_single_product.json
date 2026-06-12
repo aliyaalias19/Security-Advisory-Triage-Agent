@@ -1,0 +1,17 @@
+{
+  "advisory_id": "ADV-2099-0007",
+  "affected_products": [
+    {
+      "product": "OpenSSL",
+      "version": "3.0.0 - 3.0.6",
+      "matched_cves": [
+        "CVE-2099-1001"
+      ]
+    }
+  ],
+  "overall_severity": "CRITICAL",
+  "confidence": 0.9,
+  "recommended_action": "Immediately upgrade OpenSSL to version 3.0.7 or later on all systems terminating TLS connections. If immediate patching is not feasible, restrict network exposure of affected services as an interim measure.",
+  "rationale": "CVE-2099-1001 is directly relevant as its affected version range (3.0.0 - 3.0.6) exactly matches the advisory's stated range. This CVE describes a heap buffer overflow in TLS handshake with CVSS 9.8 (CRITICAL) enabling remote code execution, which aligns with the advisory's description. CVE-2099-1002 is excluded because it affects versions 1.1.1 - 1.1.1t, which does not overlap with the advisory's 3.0.x range. The CRITICAL severity is justified by the combination of remote exploitability, code execution impact, and exposure on TLS-terminating systems.",
+  "errors": []
+}

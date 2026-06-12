@@ -1,0 +1,31 @@
+{
+  "advisory_id": "ADV-2099-0019",
+  "affected_products": [
+    {
+      "product": "nginx",
+      "version": "1.22.1",
+      "matched_cves": [
+        "CVE-2099-2001"
+      ]
+    },
+    {
+      "product": "Log4j",
+      "version": "2.13.0",
+      "matched_cves": [
+        "CVE-2099-3001"
+      ]
+    },
+    {
+      "product": "PostgreSQL",
+      "version": "14.5",
+      "matched_cves": [
+        "CVE-2099-4001"
+      ]
+    }
+  ],
+  "overall_severity": "CRITICAL",
+  "confidence": 0.9,
+  "recommended_action": "Immediately patch Log4j 2.13.0 to version 2.16.0 or later due to critical remote code execution vulnerability in the internet-adjacent reporting service. Follow with nginx upgrade to 1.25.0+ and PostgreSQL to 14.9+.",
+  "rationale": "Log4j 2.13.0 falls within the affected range (2.0-2.14.1) of CVE-2099-3001, a CVSS 10.0 remote code execution vulnerability via JNDI lookup, and the advisory confirms this component is internet-adjacent, making this CRITICAL severity. CVE-2099-3002 affects only version 2.15.0 so is not relevant here. nginx 1.22.1 is within the affected range (1.20.0-1.24.0) of CVE-2099-2001, a HIGH severity DoS issue in the reverse proxy tier. PostgreSQL 14.5 falls within the affected range (14.0-14.8) of CVE-2099-4001, a MEDIUM severity information disclosure issue; while it holds sensitive data, it is not directly internet-facing per the advisory. Overall severity is CRITICAL due to the internet-exposed RCE vulnerability in Log4j.",
+  "errors": []
+}

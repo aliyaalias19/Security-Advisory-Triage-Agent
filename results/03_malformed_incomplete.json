@@ -1,0 +1,19 @@
+{
+  "advisory_id": "03-malformed-incomplete",
+  "affected_products": [
+    {
+      "product": "Redis",
+      "version": null,
+      "matched_cves": [
+        "CVE-2099-5001"
+      ]
+    }
+  ],
+  "overall_severity": "HIGH",
+  "confidence": 0.3,
+  "recommended_action": "Investigate the Redis deployment immediately to determine the installed version. If running Redis 6.0.0-7.0.4, prioritize upgrading to 7.0.5 or later to address CVE-2099-5001, which allows arbitrary command execution via Lua sandbox escape.",
+  "rationale": "The advisory provides no version information, making it impossible to definitively exclude CVE-2099-5001 based on version range. Given the CVE describes arbitrary command execution (CVSS 8.1, HIGH severity), and the advisory mentions operational concerns about Redis, this represents a potentially serious risk. The severity assessment is HIGH based on the returned CVE data, as remote command execution vulnerabilities warrant immediate attention. Without version confirmation, the CVE must be treated as potentially relevant.",
+  "errors": [
+    "extraction_partial: Message is truncated mid-sentence, lacks specific vulnerability details, version information, and clear description of the security issue"
+  ]
+}

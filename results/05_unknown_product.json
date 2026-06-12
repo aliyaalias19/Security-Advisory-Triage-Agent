@@ -1,0 +1,17 @@
+{
+  "advisory_id": "ADV-2099-0031",
+  "affected_products": [
+    {
+      "product": "AcmeScheduler",
+      "version": "2.4",
+      "matched_cves": []
+    }
+  ],
+  "overall_severity": "MEDIUM",
+  "confidence": 0.6,
+  "recommended_action": "Monitor for the release of patched build 2.4.1 and plan deployment to affected systems. Verify that only trusted users have authentication access to AcmeScheduler 2.4 until the patch is applied.",
+  "rationale": "No CVE data exists for this internally developed product. The advisory describes a privilege escalation vulnerability affecting authenticated users in AcmeScheduler 2.4. Privilege escalation vulnerabilities typically warrant MEDIUM to HIGH severity. Given that exploitation requires authentication (reducing attack surface) and the impact scope is limited to 'within the scheduler' rather than system-wide compromise, MEDIUM severity is appropriate. A patch is in development, indicating the vendor has acknowledged and is addressing the issue.",
+  "errors": [
+    "no_cve_data: lookup returned no CVE records for any extracted product; severity reasoned from advisory text alone"
+  ]
+}
