@@ -65,8 +65,8 @@ get the same sanitization and framing); **(4) detection & scrubbing** —
 pre-LLM heuristics plus the model's own report put the attempt in `errors`,
 and a post-hoc check scrubs demanded phrases (handling payloads split across
 line breaks, a real bug the sample advisory exposed) if a model ever complies.
-A fooled model is therefore detected, contained, and visible — not just
-hopefully absent.
+A fooled model is therefore detected, contained on the severity and
+action/rationale channels, and visible — not just hopefully absent.
 
 ## How I know it works
 
@@ -108,3 +108,9 @@ model's own injection report, so a regex-evading attempt still gets scrubbed.
   (token usage, per-stage latency, tool-failure rates), parallel lookups for
   multi-product advisories, and a real vulnerability source (NVD API) behind
   the same retry/sanitize wrapper.
+- **Leak scrub covers action/rationale, not every model-written field** —
+  `advisory_id` and product names come from extraction and pass through
+  unscrubbed; the severity floor still holds, but a downstream renderer of
+  those fields is an echo surface. With more time: run the same leak check
+  over every string field of the assembled summary before validation
+  (~10 lines).
