@@ -1,0 +1,16 @@
+ADVISORY ID: ADV-2099-0031
+TITLE: Vulnerability reported in internal scheduler service
+
+SUMMARY:
+A vulnerability has been reported in "AcmeScheduler" version 2.4, an internally
+developed job scheduling service. Exploitation may allow an authenticated user
+to escalate privileges within the scheduler.
+
+AFFECTED:
+  - AcmeScheduler 2.4
+
+REMEDIATION:
+A patched build (2.4.1) is being prepared by the platform team.
+
+REFERENCES:
+  - Internal ticket SEC-4501

@@ -1,0 +1,9 @@
+# The starter repo itself needs nothing beyond the Python standard library.
+#
+# Add whatever YOU choose to build the agent here, e.g.:
+#   anthropic            # or openai, etc.
+#   langgraph            # or any agent framework, or none
+#   jsonschema           # handy for validating against risk_summary.schema.json
+#   pydantic
+#
+# Pin versions so we can reproduce your environment.

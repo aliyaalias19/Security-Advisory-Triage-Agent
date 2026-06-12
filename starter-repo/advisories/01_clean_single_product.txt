@@ -1,0 +1,18 @@
+ADVISORY ID: ADV-2099-0007
+TITLE: Critical TLS handshake vulnerability in OpenSSL
+
+SUMMARY:
+A vulnerability has been identified in OpenSSL affecting versions 3.0.0 through
+3.0.6. A specially crafted TLS handshake can trigger a heap buffer overflow,
+potentially allowing remote code execution on the affected host. Systems
+terminating TLS with a vulnerable OpenSSL build are exposed.
+
+AFFECTED:
+  - OpenSSL 3.0.0 - 3.0.6
+
+REMEDIATION:
+Upgrade to OpenSSL 3.0.7 or later. Where immediate patching is not possible,
+restrict network exposure of affected services.
+
+REFERENCES:
+  - Vendor security bulletin

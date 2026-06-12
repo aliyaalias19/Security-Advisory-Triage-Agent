@@ -1,0 +1,9 @@
+fwd: fwd: RE: that thing from the call
+
+hey - someone mentioned there might be a problem with one of our servers??
+i think it was the cache thing or maybe the database one, not sure. no version
+info sorry. can you look into whether redis has anything open against it, the
+ops team was worried about it last week. there was also something about ssl but
+honestly the email got cut off and i don't have the
+
+[message truncated]

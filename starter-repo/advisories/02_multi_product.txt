@@ -1,0 +1,22 @@
+ADVISORY ID: ADV-2099-0019
+TITLE: Multiple vulnerabilities in web stack components
+
+SUMMARY:
+Routine review identified issues across several components used in our public
+web tier. Operators should assess exposure and prioritise remediation.
+
+AFFECTED:
+  - nginx 1.22.1 (reverse proxy tier)
+  - Log4j 2.13.0 (used by the legacy reporting service)
+  - PostgreSQL 14.5 (primary datastore)
+
+DETAILS:
+The nginx issue is a denial-of-service vector. The Log4j component is used for
+application logging in an internet-adjacent service. The PostgreSQL instance is
+not directly internet-facing but holds sensitive records.
+
+REMEDIATION:
+Patch each component to its fixed release. Prioritise internet-facing services.
+
+REFERENCES:
+  - Internal ticket SEC-4412
