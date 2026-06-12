@@ -1,0 +1,17 @@
+[project]
+name = "triage-agent"
+version = "1.0.0"
+description = "Security advisory triage agent — EC-Council take-home (ECC-AID-2026)"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["starter-repo"]   # provided code is not modified, not linted
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "B", "UP", "SIM"]
+ignore = ["SIM108"]  # ternaries are not always clearer
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
